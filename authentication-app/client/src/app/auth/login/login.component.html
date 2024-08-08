@@ -1,0 +1,9 @@
+<form [formGroup]="loginForm" (ngSubmit)="Submit()" class="loginForm">
+    <label for="email">
+      <input type="email" formControlName="email" placeholder="Email" autocomplete="email">
+    </label>    
+    <label for="password">
+      <input type="password" formControlName="password" placeholder="Password" autocomplete="current-password">
+    </label>
+    <button type="submit">Login</button>
+  </form>
