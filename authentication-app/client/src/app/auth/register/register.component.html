@@ -1,0 +1,23 @@
+<div class="form-container">
+    <div class="card">
+        <form [formGroup]="registerForm" (ngSubmit)="Submit()">
+            <h2>Hello new user!</h2>
+           <div class="input-group">
+            <label for="name">
+                <input type="name" formControlName="name" placeholder="User Name" autocomplete="name">
+            </label>
+            </div>
+            <div class="input-group">
+            <label for="email">
+                <input type="email" formControlName="email" placeholder="Email" autocomplete="email">           
+            </label>
+            </div>
+            <div class="input-group">
+            <label for="password">
+                <input type="password" formControlName="password" placeholder="password" autocomplete="password">
+            </label>
+           </div>
+            <button type="Submit" class="btn">Register</button>
+        </form>
+    </div>
+</div>
