@@ -1,1 +1,138 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px; 
+}
+
+.card {
+  background: linear-gradient(#ffffff, #e787afc7);
+  border-radius: 50px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 400px; 
+  width: 100%;
+}
+
+h2 {
+  color: #3e2525;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 30px; 
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+label:has(:focus-visible:invalid) input {
+  outline-color: tomato;
+}
+
+label:has(:focus-visible:valid) input {
+  outline-color: green;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff758c;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background-color: #3e2525;
+}
+
+.links {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.links a {
+  color: #d35268;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 20px 15px;
+    border-radius: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .input-group input {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+
+  .links {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 300px; 
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

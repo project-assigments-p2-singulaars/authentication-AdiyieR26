@@ -1,16 +1,13 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../core/services/auth/auth.service';
-import { Router } from '@angular/router';
-import { User } from '../../shared/models/login';
-import { StorageService } from '../../core/services/storage/storage.service';
-import { map, Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { Router, RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -29,7 +26,6 @@ Submit(): void {
     this.authService.login(this.loginForm.value).subscribe(
       response => {
         if(response.accessToken){
-          localStorage.setItem('token', response.accessToken);
           this.router.navigate(['/profile']);
         }
       },

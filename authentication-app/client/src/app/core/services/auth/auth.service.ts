@@ -1,7 +1,7 @@
 import { inject, Injectable} from '@angular/core';
 import { environment } from '../../../../environments/environment.development';
-import { HttpClient} from '@angular/common/http';
-import {  Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {  Observable, throwError } from 'rxjs';
 import { User } from '../../../shared/models/login';
 import { Router } from '@angular/router';
 
@@ -15,5 +15,14 @@ export class AuthService {
 
   login(user: User): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/login`, user)
+  }
+
+  register(user: User): Observable<any> {
+    return this.http.post<any> (`${this.apiUrl}/register`, user)
+  }
+
+  logout() {
+    localStorage.removeItem('currentUser');
+    this.router.navigate(['/login']);
   }
 }

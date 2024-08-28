@@ -1,6 +1,8 @@
 import { Component, inject} from '@angular/core';
-import { UserService } from '../core/services/user/user.service';
+
 import { JsonPipe } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-profile',
@@ -10,9 +12,10 @@ import { JsonPipe } from '@angular/common';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
-  userService = inject( UserService );
-  profileData = this.userService.userData;
+  router = inject(Router)
 
-  name=localStorage.getItem('name')
-
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }
 }

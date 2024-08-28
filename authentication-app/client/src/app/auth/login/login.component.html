@@ -1,9 +1,21 @@
-<form [formGroup]="loginForm" (ngSubmit)="Submit()" class="loginForm">
-    <label for="email">
-      <input type="email" formControlName="email" placeholder="Email" autocomplete="email">
-    </label>    
-    <label for="password">
-      <input type="password" formControlName="password" placeholder="Password" autocomplete="current-password">
-    </label>
-    <button type="submit">Login</button>
-  </form>
+<div class="form-container">
+  <div class="card">
+    <h2>Welcome back!</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="Submit()">
+      <div class="input-group">
+        <label for="email">
+          <input type="email" formControlName="email" placeholder="Email" autocomplete="email">
+        </label>
+      </div>
+      <div class="input-group">
+        <label for="password">
+          <input type="password" formControlName="password" placeholder="Password" autocomplete="current-password">
+        </label>
+      </div>
+      <button class="btn" type="Submit">Login</button>
+    </form>
+    <div class="links">
+      <a [routerLink]="['/register']">Create an Account</a>
+    </div>
+  </div>
+</div>

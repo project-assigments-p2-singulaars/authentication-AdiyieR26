@@ -7,7 +7,7 @@ export const authGuard: CanActivateFn = () => {
 
   if(!token){
     route.navigate(['login']);
-    alert('Permission denied, you must be logged in first')
+    alert('Permission denied, you must be logged or register in first')
     return false;
   }
   return true;
