@@ -1,5 +1,0 @@
-{
-    "users": "/600/users",
-    "posts": "/644/posts",
-    "users/:id": "/660/users/:id"
-  }

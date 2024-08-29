@@ -5,6 +5,12 @@
       "password": "$2a$10$FM3dZXwbk2BYawdzyDorjungWxIzGG/Cw8KHMtDYRR/ztdzeLEJfi",
       "name": "Juan",
       "id": "cF-BnXJ"
+    },
+    {
+      "email": "test2@gmail.com",
+      "password": "$2a$10$g0qmNPKmp11DvaQhBLjI/umZd1ErdLkDiIBch5HbHIVwRdB6baZkC",
+      "name": "Maria",
+      "id": "jM_Z5i1"
     }
   ]
 }
